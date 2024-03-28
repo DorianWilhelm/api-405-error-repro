@@ -10,7 +10,7 @@ The **api/fetchAndRelay** fails sometimes with a 405 error.
 
 ### Setup information
 
-- Nextjs 13.5.6
+- Nextjs 13.5.6 with /pages router
 - Node 20.x
 
 ## Steps to reproduce

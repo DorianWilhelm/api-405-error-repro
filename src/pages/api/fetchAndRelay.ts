@@ -5,7 +5,7 @@ import { sepolia } from "viem/chains";
 
 export const config = {
   runtime: "nodejs",
-  maxDuration: 20,
+  maxDuration: 10,
 };
 
 export default async function handler(
