@@ -18,8 +18,8 @@ export const relayerSign = async (network: number, message: `0x${string}`) => {
     return { signature, address: account.address };
   } else {
     const signer = new Relayer(defenderCredentials);
-    const signature = await signer.sign({ message });
+    const { sig } = await signer.sign({ message });
     const { address } = await signer.getRelayer();
-    return { signature, address };
+    return { signature: sig, address };
   }
 };
