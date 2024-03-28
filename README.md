@@ -1,8 +1,13 @@
 # Repro Repo to demonstrate unexpected 405 error in Vercel Serverless Functions
 
-This issue does not occur in local development, only in production deployment on Vercel.
+⚠️ **I am unable to reproduce the error in this repo at the moment. Still working on it.**
 
-Repo is using **pnpm** as a package manager.
+## Deployment links
+
+production: <https://api-405-error-repro-nine.vercel.app/>
+staging: <https://dev-api-405-error-repro-nine.vercel.app/>
+
+This issue does not occur in local development, only in production deployment on Vercel.
 
 ## Issue description
 
@@ -10,6 +15,7 @@ The **api/fetchAndRelay** fails sometimes with a 405 error.
 
 ### Setup information
 
+- pnpm as package manager
 - Nextjs 13.5.6 with /pages router
 - Node 20.x
 
