@@ -96,3 +96,5 @@ export const dynamic = 'force-dynamic';
 
 which is the only way that this shows up in their docs (the only explanation is actually for routes in the nextjs docs: <https://nextjs.org/docs/app/api-reference/file-conventions/route-segment-config#dynamic>
 the vercel docs mention it here: <https://vercel.com/docs/functions/quickstart#create-an-api-route> w/o a lot of explanation)
+
+// trigger
