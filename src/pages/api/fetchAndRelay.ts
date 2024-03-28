@@ -20,6 +20,7 @@ export default async function handler(
   if (!ipnftMetadata) {
     throw new Error("couldnt load ipnftMetadata");
   }
+  const CHAIN_ID = Number(process.env.NEXT_PUBLIC_CHAIN_ID as string);
 
   const { signature, address } = await relayerSign(
     sepolia.id,
