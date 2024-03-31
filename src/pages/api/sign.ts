@@ -10,6 +10,8 @@ const defenderCredentials = {
   apiSecret: process.env.DEFENDER_RELAY_SECRET_KEY!,
 };
 
+// const signature = "0xa65282285c98da673b145552c86a831b919624978a334bae5419b8036e1776b20ef09dc28845623e00dd6c67a64321c03b750ea6a7a4ef40ce9673e047b96e9e1c"
+
 export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse
