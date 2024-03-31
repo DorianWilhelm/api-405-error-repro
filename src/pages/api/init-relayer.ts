@@ -1,16 +1,19 @@
-// import { Relayer } from "@openzeppelin/defender-relay-client";
 import {
   DefenderRelayProvider,
   DefenderRelaySigner,
 } from "defender-relay-client/lib/ethers";
-import { toBytes } from "viem";
+
+import { NextApiRequest, NextApiResponse } from "next";
 
 const defenderCredentials = {
   apiKey: process.env.DEFENDER_RELAY_API_KEY!,
   apiSecret: process.env.DEFENDER_RELAY_SECRET_KEY!,
 };
 
-export const relayerSign = async (network: number, message: `0x${string}`) => {
+export default async function handler(
+  req: NextApiRequest,
+  res: NextApiResponse
+) {
   const signer = new DefenderRelaySigner(
     defenderCredentials,
     new DefenderRelayProvider(defenderCredentials),
@@ -18,7 +21,10 @@ export const relayerSign = async (network: number, message: `0x${string}`) => {
       speed: "fast",
     }
   );
-  const signature = await signer.signMessage(toBytes(message));
   const address = await signer.getAddress();
-  return { signature, address };
-};
+
+  return res.status(200).json({
+    status: "ok",
+    address,
+  });
+}

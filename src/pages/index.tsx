@@ -3,7 +3,7 @@ export default function Home() {
     <div>
       <button
         onClick={async () => {
-          const x = await (await fetch("/api/fetchAndRelay")).json();
+          const x = await (await fetch("/api/init-relayer")).json();
           console.log(x);
         }}
       >
