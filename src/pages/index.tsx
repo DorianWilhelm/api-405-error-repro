@@ -9,6 +9,14 @@ export default function Home() {
       >
         TRIGGER API
       </button>
+      <button
+        onClick={async () => {
+          const x = await (await fetch("/api/sign")).json();
+          console.log(x);
+        }}
+      >
+        Sign
+      </button>
     </div>
   );
 }
