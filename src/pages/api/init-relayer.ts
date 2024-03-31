@@ -26,7 +26,7 @@ export default async function handler(
     apiSecret: defenderCredentials.apiSecret,
   });
   const signResponse = await relayer.sign({
-    message: toBytes(message).toString(),
+    message,
   });
   console.log({ signResponse });
 

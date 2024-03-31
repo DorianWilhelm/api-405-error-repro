@@ -26,7 +26,7 @@ export default async function handler(
       speed: "fast",
     }
   );
-  const signature = await signer.signMessage(toBytes(message));
+  const signature = await signer.signMessage(message);
   console.log({ signature });
   return res.status(200).json({
     status: "ok",
