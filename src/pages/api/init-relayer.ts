@@ -1,7 +1,7 @@
 import {
   DefenderRelayProvider,
   DefenderRelaySigner,
-} from "defender-relay-client/lib/ethers";
+} from "@openzeppelin/defender-relay-client/lib/ethers";
 
 import { NextApiRequest, NextApiResponse } from "next";
 
